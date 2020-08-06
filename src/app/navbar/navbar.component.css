@@ -1,0 +1,13 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  height: auto;
+  width: auto;
+  padding: 20px;
+  border-bottom: solid 3px orange;
+}
+
+.nav-logo {
+  display: flex;
+}

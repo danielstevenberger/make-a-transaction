@@ -1,0 +1,10 @@
+.logo {
+  height: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    height: 30px;
+    content: url(../../../assets/images/favicon/favicon.png);
+  }
+}
