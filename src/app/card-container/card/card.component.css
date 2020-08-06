@@ -1,0 +1,28 @@
+.card {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  background-color: white;
+}
+
+.card-header {
+  background-color: rgb(35, 133, 150);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.card-header-img {
+  display: flex;
+}
+
+.card-header-title {
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.card-content {
+  height: 50px;
+}
