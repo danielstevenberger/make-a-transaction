@@ -1,11 +1,13 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { NavbarLogoComponent } from "./navbar/navbar-logo/navbar-logo.component";
 import { CardContainerComponent } from "./card-container/card-container.component";
-import { CardComponent } from './card-container/card/card.component';
+import { CardComponent } from "./card-container/card/card.component";
+import { TransferComponent } from "./transfer/transfer.component";
 
 @NgModule({
   declarations: [
@@ -14,8 +16,9 @@ import { CardComponent } from './card-container/card/card.component';
     NavbarLogoComponent,
     CardContainerComponent,
     CardComponent,
+    TransferComponent,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

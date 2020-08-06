@@ -2,7 +2,6 @@
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  width: 400px;
   background-color: white;
 }
 
@@ -24,5 +23,5 @@
 }
 
 .card-content {
-  height: 50px;
+  padding: 20px;
 }
