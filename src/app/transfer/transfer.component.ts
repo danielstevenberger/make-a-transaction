@@ -68,13 +68,15 @@ export class TransferComponent implements OnInit {
       let transaction: Transaction = {
         categoryCode: "#c12020",
         transactionDate: new Date().valueOf(),
-        merchantLogo: "https://via.placeholder.com/150",
+        merchantLogo:
+          "https://cdn.pixabay.com/photo/2016/03/31/21/41/cash-1296584_960_720.png",
         merchant: this.transferForm.get("toAccount").value,
         transactionType: "Online Transfer",
-        amount: this.transferForm.get("amount").value,
+        amount: this.transferForm.get("amount").value.toString(),
       };
 
-      this.data.push(transaction);
+      this.data.unshift(transaction);
+      console.log(this.data);
       this.transactionsService.newTransaction(this.data);
       this.transferForm.reset();
       this.errorMessage = false;
@@ -83,7 +85,7 @@ export class TransferComponent implements OnInit {
     this.httpClient
       .get("../../assets/transaction-data/transactions.json")
       .subscribe((data) => {
-        this.data = data["data"];
+        this.data = [...data["data"]];
       });
   }
 }

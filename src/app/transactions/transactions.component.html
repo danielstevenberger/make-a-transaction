@@ -1,7 +1,6 @@
 <div class="transactions">
-  {{ sortBy }} {{ oderBy }} {{ searchBy }}
   <app-search></app-search>
-  <div *ngFor="let d of data">
+  <div *ngFor="let d of data | orderBy: order:reverse:true | filter: searchBy">
     <app-transaction [transaction]="d"></app-transaction>
   </div>
 </div>

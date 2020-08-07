@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { OrderModule } from "ngx-order-pipe";
 
 import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./navbar/navbar.component";
@@ -32,7 +33,13 @@ import { FilterPipe } from "./pipes/filter.pipe";
     SearchComponent,
     FilterPipe,
   ],
-  imports: [BrowserModule, ReactiveFormsModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule,
+    OrderModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

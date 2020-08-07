@@ -1,21 +1,16 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from "@angular/core";
 
 @Pipe({
-  name: 'filter'
+  name: "filter",
 })
 export class FilterPipe implements PipeTransform {
+  transform(value: any, args?: any): any {
+    if (!value && value != " ") return null;
+    if (!args) return value;
+    args = args.toLowerCase();
 
-  transform(value: any, filterString: string, propName: string): unknown {
-    if (value.length === 0){
-      return value;
-    }
-    for (const item of value){
-      const resultArray = [];
-      if(item[propName] === filterString){
-        resultArray.push(item);
-      }
-      return resultArray;
-    }
+    return value.filter(function (item) {
+      return JSON.stringify(item).toLowerCase().includes(args);
+    });
   }
-
 }

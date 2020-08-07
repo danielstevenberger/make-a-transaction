@@ -28,4 +28,10 @@ export class TransactionsService {
   newTransaction(data: Transaction[]) {
     this.transaction.next(data);
   }
+
+  convertCopy(data: Transaction[]) {
+    data.forEach((transaction: Transaction) => {
+      transaction.amount = +transaction.amount;
+    });
+  }
 }

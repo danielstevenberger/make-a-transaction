@@ -4,14 +4,14 @@ export class Transaction {
   public merchantLogo: string;
   public merchant: string;
   public transactionType: string;
-  public amount: number;
+  public amount: any;
   constructor(
     categoryCode: string,
     transactionDate: number,
     merchantLogo: string,
     merchant: string,
     transactionType: string,
-    amount: number
+    amount: any
   ) {
     this.categoryCode = categoryCode;
     this.transactionDate = transactionDate;

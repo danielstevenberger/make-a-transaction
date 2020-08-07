@@ -16,6 +16,9 @@ export class TransactionsComponent implements OnInit {
     private transactionService: TransactionsService
   ) {}
 
+  order: string;
+  reverse: boolean = false;
+
   sortBy = "date";
   oderBy = "desc";
   searchBy = "";
@@ -26,17 +29,30 @@ export class TransactionsComponent implements OnInit {
     });
     this.transactionService.order.subscribe((order: string) => {
       this.oderBy = order;
+      if (order == "desc") {
+        this.reverse = false;
+      } else {
+        this.reverse = true;
+      }
     });
     this.transactionService.type.subscribe((type: string) => {
       this.sortBy = type;
+      if (type == "beneficiary") {
+        this.order = "merchant";
+      } else {
+        this.order = type;
+      }
     });
     this.httpClient
       .get("../../assets/transaction-data/transactions.json")
       .subscribe((data) => {
-        this.data = data["data"];
+        console.log(data);
+        this.data = [...data["data"]];
+        this.transactionService.convertCopy(this.data);
       });
     this.transactionService.transaction.subscribe((data: any) => {
       this.data = data;
+      this.transactionService.convertCopy(this.data);
     });
   }
 }
