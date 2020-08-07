@@ -1,7 +1,7 @@
 .bg {
   background-image: url(../../assets/images/background/background.jpg);
-  height: 100vh;
-  width: auto;
+
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

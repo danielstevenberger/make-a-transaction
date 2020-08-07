@@ -1,4 +1,12 @@
 .transactions {
   margin-top: 10px;
-  width: 700px;
+  width: 100%
+}
+
+@media only screen and (max-width: 600px) {
+  .transactions{
+    width: 270px;
+  }
+
+
 }
