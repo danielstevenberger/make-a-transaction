@@ -1,4 +1,5 @@
 <div class="transactions">
+  {{ sortBy }} {{ oderBy }} {{ searchBy }}
   <app-search></app-search>
   <div *ngFor="let t of test">
     <app-transaction [transaction]="t"></app-transaction>

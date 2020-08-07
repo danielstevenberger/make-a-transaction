@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 
@@ -14,6 +15,7 @@ import { HomeComponent } from "./home/home.component";
 import { TransactionsComponent } from "./transactions/transactions.component";
 import { TransactionComponent } from "./transactions/transaction/transaction.component";
 import { SearchComponent } from "./transactions/search/search.component";
+import { FilterPipe } from "./pipes/filter.pipe";
 
 @NgModule({
   declarations: [
@@ -28,8 +30,9 @@ import { SearchComponent } from "./transactions/search/search.component";
     TransactionsComponent,
     TransactionComponent,
     SearchComponent,
+    FilterPipe,
   ],
-  imports: [BrowserModule, ReactiveFormsModule, HttpClientModule],
+  imports: [BrowserModule, ReactiveFormsModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
