@@ -2,6 +2,7 @@
   display: flex;
   border: 1px solid rgb(199, 199, 199);
   border-left: none;
+  margin-bottom: -1px;
 }
 
 .category-code {

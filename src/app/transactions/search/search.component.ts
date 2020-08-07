@@ -7,7 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
+  order = '\u25BC'
+  active = 'date';
+
   constructor() { }
+
+  sortBy(by: string){
+    if(this.active == by){
+    if (this.order == '\u25B2'){
+      this.order = '\u25BC'
+    }
+    else{
+      this.order = '\u25B2'
+    }
+  }
+    this.active = by;
+
+
+  }
 
   ngOnInit(): void {
   }

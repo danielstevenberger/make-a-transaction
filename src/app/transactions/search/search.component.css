@@ -1,0 +1,40 @@
+.search{
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid rgb(149, 160, 171, 0.5);
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+.sort-by{
+  margin-left: auto;
+ font-size: 15px;
+ margin-right: 15px;
+}
+
+.sort-btn{
+  background-color: white;
+  border: solid 1px rgb(193, 193, 193);
+  cursor: pointer;
+  color: rgb(82, 82, 82);
+  font-size: 11px;
+  height: 30px;
+  width: auto;
+}
+
+.sort-btn:focus {
+  outline: none;
+}
+
+/* .sort-btn:hover{
+  background-color: rgb(171, 171, 171);
+} */
