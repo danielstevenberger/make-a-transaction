@@ -10,6 +10,9 @@ import { CardComponent } from "./card-container/card/card.component";
 import { TransferComponent } from "./transfer/transfer.component";
 import { ModalComponent } from './modal/modal.component';
 import { HomeComponent } from './home/home.component';
+import { TransactionsComponent } from './transactions/transactions.component';
+import { TransactionComponent } from './transactions/transaction/transaction.component';
+import { SearchComponent } from './transactions/search/search.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { HomeComponent } from './home/home.component';
     TransferComponent,
     ModalComponent,
     HomeComponent,
+    TransactionsComponent,
+    TransactionComponent,
+    SearchComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule],
   providers: [],

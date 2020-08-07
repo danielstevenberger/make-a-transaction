@@ -43,9 +43,6 @@ export class TransferComponent implements OnInit {
         this.transferForm.get("amount").value >=
         -500
     ) {
-      // console.log(this.transferForm.value);
-      // this.transferForm.reset();
-      // this.errorMessage = false;
       this.transferService.openConfirm(
         this.account.accountName,
         this.transferForm.get("toAccount").value,
