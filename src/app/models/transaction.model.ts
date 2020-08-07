@@ -1,13 +1,13 @@
 export class Transaction {
   public categoryCode: string;
-  public transactionDate: Date;
+  public transactionDate: number;
   public merchantLogo: string;
   public merchant: string;
   public transactionType: string;
   public amount: number;
   constructor(
     categoryCode: string,
-    transactionDate: Date,
+    transactionDate: number,
     merchantLogo: string,
     merchant: string,
     transactionType: string,

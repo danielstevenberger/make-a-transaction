@@ -1,3 +1,6 @@
+import { TransactionsService } from "./../services/transactions.service";
+import { Transaction } from "src/app/models/transaction.model";
+import { HttpClient } from "@angular/common/http";
 import { AccountService } from "./../services/account.service";
 import { Account } from "./../models/account.model";
 import { TransferService } from "./../services/transfer.service";
@@ -12,9 +15,12 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 export class TransferComponent implements OnInit {
   constructor(
     private transferService: TransferService,
-    private accountService: AccountService
+    private accountService: AccountService,
+    private httpClient: HttpClient,
+    private transactionsService: TransactionsService
   ) {}
 
+  data: Transaction[];
   errorMessage = false;
   account: Account;
   overdrawn = false;
@@ -59,9 +65,25 @@ export class TransferComponent implements OnInit {
       this.accountService.subtractBalance(
         this.transferForm.get("amount").value
       );
+      let transaction: Transaction = {
+        categoryCode: "#c12020",
+        transactionDate: new Date().valueOf(),
+        merchantLogo: "https://via.placeholder.com/150",
+        merchant: this.transferForm.get("toAccount").value,
+        transactionType: "Online Transfer",
+        amount: this.transferForm.get("amount").value,
+      };
 
+      this.data.push(transaction);
+      this.transactionsService.newTransaction(this.data);
       this.transferForm.reset();
       this.errorMessage = false;
     });
+
+    this.httpClient
+      .get("../../assets/transaction-data/transactions.json")
+      .subscribe((data) => {
+        this.data = data["data"];
+      });
   }
 }

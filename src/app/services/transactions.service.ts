@@ -1,5 +1,6 @@
 import { Subject } from "rxjs";
 import { Injectable } from "@angular/core";
+import { Transaction } from "../models/transaction.model";
 
 @Injectable({
   providedIn: "root",
@@ -8,6 +9,7 @@ export class TransactionsService {
   type = new Subject<string>();
   order = new Subject<string>();
   search = new Subject<string>();
+  transaction = new Subject<Transaction[]>();
 
   constructor() {}
 
@@ -21,5 +23,9 @@ export class TransactionsService {
 
   searchBy(search: string) {
     this.search.next(search);
+  }
+
+  newTransaction(data: Transaction[]) {
+    this.transaction.next(data);
   }
 }

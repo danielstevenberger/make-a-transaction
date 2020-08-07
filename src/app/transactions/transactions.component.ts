@@ -9,7 +9,7 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ["./transactions.component.css"],
 })
 export class TransactionsComponent implements OnInit {
-  test: Transaction[];
+  data: Transaction[];
 
   constructor(
     private httpClient: HttpClient,
@@ -33,7 +33,10 @@ export class TransactionsComponent implements OnInit {
     this.httpClient
       .get("../../assets/transaction-data/transactions.json")
       .subscribe((data) => {
-        this.test = data["data"];
+        this.data = data["data"];
       });
+    this.transactionService.transaction.subscribe((data: any) => {
+      this.data = data;
+    });
   }
 }

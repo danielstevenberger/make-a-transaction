@@ -1,7 +1,7 @@
 <div class="transactions">
   {{ sortBy }} {{ oderBy }} {{ searchBy }}
   <app-search></app-search>
-  <div *ngFor="let t of test">
-    <app-transaction [transaction]="t"></app-transaction>
+  <div *ngFor="let d of data">
+    <app-transaction [transaction]="d"></app-transaction>
   </div>
 </div>
