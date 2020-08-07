@@ -4,22 +4,10 @@
       <label for="fromAccount">From Account</label>
       <input
         type="text"
-        formControlName="fromAccount"
         id="fromAccount"
         placeholder="Free Checking(4692) - $582476"
-        onfocus="this.placeholder = ''"
-        [class.invalidInput]="
-          !transferForm.get('fromAccount').valid &&
-          transferForm.get('fromAccount').touched
-        "
+        disabled
       />
-      <span
-        *ngIf="
-          !transferForm.get('fromAccount').valid &&
-          transferForm.get('fromAccount').touched
-        "
-        >Please enter an account name</span
-      >
     </div>
     <div class="form-group">
       <label for="toAccount">To Account</label>
@@ -65,6 +53,6 @@
       >
     </div>
     <span *ngIf="errorMessage == true">Please fill out all of the fields</span>
-    <button class.i class="btn" type="submit">Submit</button>
+    <button class="btn" type="submit">Submit</button>
   </form>
 </div>

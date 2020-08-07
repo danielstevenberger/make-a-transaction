@@ -8,6 +8,8 @@ import { NavbarLogoComponent } from "./navbar/navbar-logo/navbar-logo.component"
 import { CardContainerComponent } from "./card-container/card-container.component";
 import { CardComponent } from "./card-container/card/card.component";
 import { TransferComponent } from "./transfer/transfer.component";
+import { ModalComponent } from './modal/modal.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { TransferComponent } from "./transfer/transfer.component";
     CardContainerComponent,
     CardComponent,
     TransferComponent,
+    ModalComponent,
+    HomeComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule],
   providers: [],
