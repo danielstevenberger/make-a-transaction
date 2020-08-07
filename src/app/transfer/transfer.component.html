@@ -5,7 +5,9 @@
       <input
         type="text"
         id="fromAccount"
-        placeholder="Free Checking(4692) - $582476"
+        placeholder="{{ account.accountName }} - {{
+          account.balance | currency: 'USD':'symbol':'1.2-2'
+        }}"
         disabled
       />
     </div>
@@ -36,6 +38,7 @@
         formControlName="amount"
         type="number"
         step="0.01"
+        min="0"
         id="amount"
         placeholder="$ 0.00"
         onfocus="this.placeholder = ''"
@@ -49,10 +52,11 @@
           !transferForm.get('amount').valid &&
           transferForm.get('amount').touched
         "
-        >Please enter an amount</span
+        >Please enter a valid amount</span
       >
     </div>
-    <span *ngIf="errorMessage == true">Please fill out all of the fields</span>
+    <span *ngIf="errorMessage">Please fill out all of the fields</span>
+    <span *ngIf="overdrawn">You cannot overdraw moren than $500 </span>
     <button class="btn" type="submit">Submit</button>
   </form>
 </div>

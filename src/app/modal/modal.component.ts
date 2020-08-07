@@ -1,5 +1,5 @@
 import { TransferService } from "./../services/transfer.service";
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
   selector: "app-modal",
@@ -8,6 +8,9 @@ import { Component, OnInit } from "@angular/core";
 })
 export class ModalComponent implements OnInit {
   constructor(private transferService: TransferService) {}
+  @Input() toAccount: string;
+  @Input() fromAccount: string;
+  @Input() amount: number;
 
   ngOnInit(): void {}
 

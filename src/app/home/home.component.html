@@ -1,5 +1,10 @@
 <div class="bg">
-  <app-modal *ngIf="modal == true"></app-modal>
+  <app-modal
+    *ngIf="modal == true"
+    [fromAccount]="fromAccount"
+    [toAccount]="toAccount"
+    [amount]="amount"
+  ></app-modal>
   <app-navbar></app-navbar>
   <app-card-container></app-card-container>
 </div>
