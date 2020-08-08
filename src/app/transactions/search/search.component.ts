@@ -13,6 +13,11 @@ export class SearchComponent implements OnInit {
 
   constructor(private transactionService: TransactionsService) {}
 
+  clear() {
+    this.search = "";
+    this.searchBy();
+  }
+
   searchBy() {
     this.transactionService.searchBy(this.search);
   }

@@ -20,7 +20,7 @@ export class TransactionsComponent implements OnInit {
   reverse: boolean = false;
 
   sortBy = "date";
-  oderBy = "desc";
+  orderBy = "asc";
   searchBy = "";
 
   ngOnInit(): void {
@@ -28,7 +28,7 @@ export class TransactionsComponent implements OnInit {
       this.searchBy = search;
     });
     this.transactionService.order.subscribe((order: string) => {
-      this.oderBy = order;
+      this.orderBy = order;
       if (order == "desc") {
         this.reverse = false;
       } else {
@@ -38,9 +38,9 @@ export class TransactionsComponent implements OnInit {
     this.transactionService.type.subscribe((type: string) => {
       this.sortBy = type;
       if (type == "beneficiary") {
-        this.order = "merchant";
+        this.sortBy = "merchant";
       } else {
-        this.order = type;
+        this.sortBy = type;
       }
     });
     this.httpClient

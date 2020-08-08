@@ -52,3 +52,10 @@ span {
   font-weight: normal;
   font-size: 15px;
 }
+
+@media only screen and (max-width: 300px) {
+  .transfer {
+    margin-top: 10px;
+    width: 220px;
+  }
+}

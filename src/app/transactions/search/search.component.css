@@ -3,6 +3,12 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
+}
+
+.search-bar {
+  display: flex;
+  width: 55%;
 }
 
 input {
@@ -10,16 +16,26 @@ input {
   border: none;
   border-bottom: 1px solid rgb(149, 160, 171, 0.5);
   width: 100%;
-  margin-bottom: 15px;
 }
 
 input:focus {
   outline: none;
 }
 
+.btn-close {
+  background-color: white;
+  border: solid 1px rgb(193, 193, 193);
+  cursor: pointer;
+  color: rgb(82, 82, 82);
+  font-size: 11px;
+  width: auto;
+  height: 22px;
+}
+
 .sort {
-  margin-left: auto;
   display: flex;
+  align-self: end;
+  justify-self: self-end;
 }
 
 .sort-by {
@@ -37,10 +53,34 @@ input:focus {
   width: auto;
 }
 
-.sort-btn:focus {
+button:focus {
   outline: none;
 }
 
-/* .sort-btn:hover{
-  background-color: rgb(171, 171, 171);
-} */
+button:hover {
+  background-color: rgb(223, 223, 223);
+}
+
+@media only screen and (max-width: 1200px) {
+  .search {
+    flex-direction: column;
+    justify-items: center;
+    align-content: center;
+  }
+  .search-bar {
+    width: 80%;
+  }
+  .sort {
+    margin-top: 15px;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .sort-btn {
+    font-size: 10px;
+  }
+  .sort-by {
+    display: none;
+  }
+}

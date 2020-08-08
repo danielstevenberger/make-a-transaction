@@ -50,30 +50,55 @@ img {
   margin-right: 15px;
 }
 
-
 @media only screen and (max-width: 800px) {
   img {
     display: none;
   }
-  .merchant-logo{
-
+  .merchant-logo {
     margin-left: 10px;
     margin-right: 10px;
   }
-  .amount{
+  .amount {
     font-size: 13px;
   }
 
-  .merchant{
+  .merchant {
     width: 100px;
     font-size: 14px;
     overflow: hidden;
     white-space: nowrap;
-
+    word-wrap: unset;
   }
 
-  .transaction-date{
+  .transaction-date {
     font-size: 13px;
   }
+}
 
+@media only screen and (max-width: 300px) {
+  img {
+    display: none;
+  }
+  .merchant-logo {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .amount {
+    font-size: 11px;
+  }
+
+  .merchant {
+    width: 80px;
+    font-size: 11px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .transaction-type {
+    font-size: 11px;
+  }
+
+  .transaction-date {
+    font-size: 10px;
+  }
 }

@@ -1,6 +1,6 @@
 <div class="transactions">
   <app-search></app-search>
-  <div *ngFor="let d of data | orderBy: order:reverse:true | filter: searchBy">
+  <div *ngFor="let d of data | orderBy: sortBy:reverse:true | filter: searchBy">
     <app-transaction [transaction]="d"></app-transaction>
   </div>
 </div>
