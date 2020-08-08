@@ -46,7 +46,6 @@ export class TransactionsComponent implements OnInit {
     this.httpClient
       .get("../../assets/transaction-data/transactions.json")
       .subscribe((data) => {
-        console.log(data);
         this.data = [...data["data"]];
         this.transactionService.convertCopy(this.data);
       });
