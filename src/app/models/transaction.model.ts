@@ -1,3 +1,4 @@
+//Model for a transaction
 export class Transaction {
   public categoryCode: string;
   public transactionDate: number;

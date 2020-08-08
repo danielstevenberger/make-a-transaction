@@ -10,14 +10,17 @@ export class AccountService {
     balance: 5824.76,
   };
 
+  //returns the account
   getAccount() {
     return this.account;
   }
 
+  //returns the balance of the account
   getBalance() {
     return this.account.balance;
   }
 
+  //Subtracts the amount being transferred from the account
   subtractBalance(amount: number) {
     this.account.balance =
       Math.round((this.account.balance - amount) * 100) / 100;

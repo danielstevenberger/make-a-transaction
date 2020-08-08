@@ -1,7 +1,10 @@
 <div class="transfer">
+  <!-- Reactive Form -->
   <form [formGroup]="transferForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="fromAccount">From Account</label>
+      <!-- Disabled input displaying an account and balance.
+      Uses a data pipe and updates as the account drains. -->
       <input
         type="text"
         id="fromAccount"
@@ -13,6 +16,8 @@
     </div>
     <div class="form-group">
       <label for="toAccount">To Account</label>
+      <!-- Input to recieve an account name.
+      Has validation warnings if it is touched and not valid. -->
       <input
         type="text"
         formControlName="toAccount"
@@ -34,6 +39,8 @@
     </div>
     <div class="form-group">
       <label for="amount">Amount</label>
+      <!-- Input to recieve an amount.
+      Has validation warnings if it is touched and not valid. -->
       <input
         formControlName="amount"
         type="number"
@@ -55,8 +62,10 @@
         >Please enter a valid amount</span
       >
     </div>
+    <!-- Validation warning if the form is not filled -->
     <span *ngIf="errorMessage">Please fill out all of the fields</span>
-    <span *ngIf="overdrawn">You cannot overdraw moren than $500 </span>
+    <!-- Validation warning if the user tries to go below -$500 -->
+    <span *ngIf="overdrawn">You cannot overdraw more than $500 </span>
     <button class="btn" type="submit">Submit</button>
   </form>
 </div>

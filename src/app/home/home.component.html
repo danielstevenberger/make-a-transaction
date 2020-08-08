@@ -1,10 +1,12 @@
 <div class="bg">
+  <!-- Modal is here so it can take over the enitre screen. It has 3 @Input variables  -->
   <app-modal
     *ngIf="modal == true"
     [fromAccount]="fromAccount"
     [toAccount]="toAccount"
     [amount]="amount"
   ></app-modal>
+  <!-- the components for the navbar and the card-container(main body) are here -->
   <app-navbar></app-navbar>
   <app-card-container></app-card-container>
 </div>

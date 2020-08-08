@@ -8,7 +8,7 @@
 .category-code {
   border-left: none;
   border-right: none;
-  height: 50px;
+  height: auto;
   width: 5px;
   margin-right: 20px;
 }
@@ -29,7 +29,7 @@
 }
 
 img {
-  height: 35px;
+  width: 35px;
 }
 
 .transaction-group {
@@ -65,9 +65,7 @@ img {
   .merchant {
     width: 100px;
     font-size: 14px;
-    overflow: hidden;
-    white-space: nowrap;
-    word-wrap: unset;
+    word-wrap: break-word;
   }
 
   .transaction-date {
@@ -90,8 +88,7 @@ img {
   .merchant {
     width: 80px;
     font-size: 11px;
-    overflow: hidden;
-    white-space: nowrap;
+    word-wrap: break-word;
   }
 
   .transaction-type {

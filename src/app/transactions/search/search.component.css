@@ -44,6 +44,7 @@ input:focus {
 }
 
 .sort-btn {
+  margin-left: -1px;
   background-color: white;
   border: solid 1px rgb(193, 193, 193);
   cursor: pointer;
@@ -51,6 +52,10 @@ input:focus {
   font-size: 11px;
   height: 30px;
   width: auto;
+}
+
+.btn-active {
+  background-color: rgb(223, 223, 223);
 }
 
 button:focus {

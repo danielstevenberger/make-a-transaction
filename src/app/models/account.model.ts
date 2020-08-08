@@ -1,3 +1,4 @@
+//Model for an account
 export class Account {
   public accountName: string;
   public balance: number;

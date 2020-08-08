@@ -1,5 +1,6 @@
 <div class="search">
   <div class="search-bar">
+    <!-- Uses two-way binding to update as the user types in the search field -->
     <input
       type="text"
       placeholder="Search by typing..."
@@ -12,13 +13,28 @@
   </div>
   <div class="sort">
     <div class="sort-by">Sort by</div>
-    <button class="sort-btn" (click)="sortBy('date')">
+    <!-- Determines if the button is active and ascending or descending -->
+    <button
+      class="sort-btn"
+      (click)="sortBy('date')"
+      [class.btn-active]="active == 'date'"
+    >
       DATE {{ active == "date" ? order : "" }}
     </button>
-    <button class="sort-btn" (click)="sortBy('beneficiary')">
+    <!-- Determines if the button is active and ascending or descending -->
+    <button
+      class="sort-btn"
+      (click)="sortBy('beneficiary')"
+      [class.btn-active]="active == 'beneficiary'"
+    >
       BENEFICIARY {{ active == "beneficiary" ? order : "" }}
     </button>
-    <button class="sort-btn" (click)="sortBy('amount')">
+    <!-- Determines if the button is active and ascending or descending -->
+    <button
+      class="sort-btn"
+      (click)="sortBy('amount')"
+      [class.btn-active]="active == 'amount'"
+    >
       AMOUNT {{ active == "amount" ? order : "" }}
     </button>
   </div>

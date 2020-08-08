@@ -1,6 +1,14 @@
 <div class="transactions">
   <app-search></app-search>
-  <div *ngFor="let d of data | orderBy: sortBy:reverse:true | filter: searchBy">
-    <app-transaction [transaction]="d"></app-transaction>
+  <!-- Uses ngFor to display the list of transactions
+  Uses https://www.npmjs.com/package/ngx-order-pipe to order the transaction ascending and descending
+  Uses a filter to pipe to display the results in the search field. -->
+  <div
+    *ngFor="
+      let transaction of data | orderBy: sortBy:reverse:true | filter: searchBy
+    "
+  >
+    <!-- transaction component has one input that recieves the transaction data -->
+    <app-transaction [transaction]="transaction"></app-transaction>
   </div>
 </div>

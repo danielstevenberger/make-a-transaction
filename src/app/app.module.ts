@@ -1,3 +1,4 @@
+//Modules
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
@@ -5,6 +6,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { OrderModule } from "ngx-order-pipe";
 
+// Components
 import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { NavbarLogoComponent } from "./navbar/navbar-logo/navbar-logo.component";
@@ -16,6 +18,8 @@ import { HomeComponent } from "./home/home.component";
 import { TransactionsComponent } from "./transactions/transactions.component";
 import { TransactionComponent } from "./transactions/transaction/transaction.component";
 import { SearchComponent } from "./transactions/search/search.component";
+
+//FilterPipe
 import { FilterPipe } from "./pipes/filter.pipe";
 
 @NgModule({

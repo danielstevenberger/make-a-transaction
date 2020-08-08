@@ -5,9 +5,11 @@
     </div>
     <div class="card-header-title">{{ cardTitle }}</div>
   </div>
+  <!-- Creates the transfer card -->
   <div class="card-content" *ngIf="cardType === 'transfer'">
     <app-transfer></app-transfer>
   </div>
+  <!-- Creates the transaction card -->
   <div class="card-content" *ngIf="cardType === 'transactions'">
     <app-transactions></app-transactions>
   </div>

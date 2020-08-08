@@ -1,7 +1,9 @@
+/* Logo has no margin. I thought it looked better hugging the left side of the screen */
 .logo {
   height: 40px;
 }
 
+/* Navbar logo changes on smaller screens */
 @media only screen and (max-width: 600px) {
   .logo {
     height: 30px;
