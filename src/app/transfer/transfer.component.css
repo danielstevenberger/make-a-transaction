@@ -23,6 +23,10 @@ input:focus {
   outline: none;
 }
 
+.disabledInput::placeholder {
+  color: black;
+}
+
 .btn {
   margin-top: 15px;
   float: right;

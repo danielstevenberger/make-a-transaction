@@ -76,8 +76,12 @@ button:hover {
     width: 80%;
   }
   .sort {
+    align-self: center;
     margin-top: 15px;
     margin-left: 0;
+  }
+  .sort-by {
+    display: none;
   }
 }
 
